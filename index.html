@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/*      ----------GERAL--------------- */
+    *{
+        margin: 0;
+        padding: 0;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body{
+        background-image: url(./img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+/*      -------------HEADER----------------- */
+    header{
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(rgb(80, 40, 100), rgba(0, 0, 0, 0.2));
+        box-shadow: 0px 0px 30px blueviolet;
+    }
+    #Logo{
+        margin-left: 5vw;
+        font-size: 2em;
+        text-decoration: none;
+        color: white;
+        padding: .5vw;
+        border-radius: 20px;
+        border: gray 2px solid;
+    }
+    #Logo:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+
+    }
+    .Opcoes{
+        display: flex;
+        margin-left: 2vw;
+    }
+    .Opcoes a{
+        text-decoration: none;
+        color: white;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: .5vw;
+        font-size: 1.5em;
+        border-radius: 20px;
+        border: 1px gray solid;
+    }
+    .Opcoes a:hover{
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+/*  --------------FORMULARIO--------------------- */
+    fieldset{
+        border-radius: 20px;
+        backdrop-filter: blur(25px);
+        box-shadow: 0px 0px 30px rgba(255, 255, 255, .5);
+        transition: .5s;
+        cursor: pointer;
+    }
+    fieldset:hover{
+        box-shadow: 0px 0px 50px white;
+        transition: .5s;
+    }
+
+    legend{
+        text-align: center;
+        font-size: 2em;
+        color: white;
+        
+    }
+    .Form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 30vw;
+        border-radius: 20px;
+        color: wheat;
+        padding-bottom: 1em;
+    }
+    .Dados{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1em;
+        font-size: 1.5em;
+        cursor: pointer;
+        width: 100%;
+    }
+    .Dados input{
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding-left: 1em;
+        width: 50%;
+        height: 5vh;
+        font-size: .8em;
+        margin-top: 10px;
+        color: rgba(0, 0, 0, .8);
+        transition: ease-out .25s;
+        cursor: pointer;
+    }
+
+    .Dados input:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: ease-out .25s;
+    }
+
+
+
+    #Submit{
+        border-radius: 20px;
+        padding: .5vw;
+        transition: ease-in-out .25s;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+    #Submit:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+        color: wheat;
+        transition: ease-in-out .25s;
+    }
+
+
+    /* Resposivo a partir dos 650px */
+</style>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" id="Logo">HOME</a>
+            <div class="Opcoes">
+                <a href="#">Sobre</a>
+                <a href="#">Home</a>
+                <a href="#">Contato</a>
+                <a href="#">*</a>
+            </div>
+        </header>
+        <fieldset><legend>Fomulario</legend>
+        <form action="" class="Form">
+            <label for="Nome" class="Dados">Nome
+            <input type="text" id="Nome" name="Nome" placeholder="Nome" required>
+            </label>
+            <label for="Sobrenome" class="Dados">Sobrenome
+            <input type="text" id="Sobrenome" name="Sobrenome" placeholder="Sobrenome" required>
+            </label>
+            <label for="Email" class="Dados">Email
+            <input type="email" id="Email" name="Email" placeholder="Email"  required>
+            </label>
+            <label for="Password" class="Dados">Senha
+                <input type="password" id="Password" name="Password" placeholder="Senha" required>
+                </label>
+            <input type="submit" value="Enviar" id="Submit" >
+        </form>
+        </fieldset>
+    </div>
+</body>
+</html>
